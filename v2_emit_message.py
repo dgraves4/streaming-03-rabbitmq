@@ -1,5 +1,4 @@
 """
-
 Derek Graves
 05/16/2024
 Error Corrections and Refactoring
@@ -75,6 +74,6 @@ if __name__ == "__main__":
     #Define our variables for ease of use in changing parameters andmessages
     host = "localhost"
     queue_name = "hello"
-    message = "Hello World!"
+    message = "Great job on correcting v2!"
     send_message(host, queue_name, message) #Use variables to send message
 

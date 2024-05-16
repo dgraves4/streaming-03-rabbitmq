@@ -103,9 +103,8 @@ def main(hn: str = "localhost"):
         sys.exit(0)
     finally:
         if connection.is_open:
+            logger.info("Closing connection. Goodbye.")
             connection.close()
-        logger.info("Closing connection. Goodbye.")
-
 
 # ---------------------------------------------------------------------------
 # If this is the script we are running, then call some functions and execute code!

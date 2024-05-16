@@ -178,7 +178,7 @@ and a consistent, reusable approach to building code.
 Each of the version 2 programs include an error as well. 
 
 1. Find the error and fix it. (See below.)
-1. Compare the structure of the version 2 files. These files include additional error handling
+1. Compare the structure of the version 2 files.
 1. Modify the docstrings on all your files.
 1. Include your name and the date.
 1. Imports always go at the top, just after the file docstring.
@@ -212,10 +212,6 @@ message = "Refactoring is very useful for code maintenance and accessibility."
     message = "Hello World!"
     send_message(host, queue_name, message)
 ```
-
-For v2_listen_for_messages.py, the errors are as follows:
-```
-
 
 ## Reference
 

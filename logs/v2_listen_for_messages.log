@@ -1,0 +1,8 @@
+2024-05-16 01:52:59,978.v2_listen_for_messages.INFO ==================================================
+2024-05-16 01:52:59,978.v2_listen_for_messages.INFO Today is 2024-05-16 at 01:52 AM
+2024-05-16 01:52:59,979.v2_listen_for_messages.INFO Running on: nt Windows 11
+2024-05-16 01:52:59,979.v2_listen_for_messages.INFO Python version:  3.12.2
+2024-05-16 01:52:59,979.v2_listen_for_messages.INFO Python path: C:\Users\derek\OneDrive\Documents\Streaming Data\Week 3\streaming-03-rabbitmq\.venv
+2024-05-16 01:52:59,979.v2_listen_for_messages.INFO Working dir: C:\Users\derek\OneDrive\Documents\Streaming Data\Week 3\streaming-03-rabbitmq
+2024-05-16 01:52:59,979.v2_listen_for_messages.INFO ==================================================
+2024-05-16 01:52:59,991.v2_listen_for_messages.INFO  [*] Waiting for messages. To exit press CTRL+C
