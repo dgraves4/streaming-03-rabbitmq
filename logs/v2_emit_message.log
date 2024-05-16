@@ -1,8 +1,8 @@
-2024-05-16 01:53:38,795.v2_emit_message.INFO ==================================================
-2024-05-16 01:53:38,795.v2_emit_message.INFO Today is 2024-05-16 at 01:53 AM
-2024-05-16 01:53:38,795.v2_emit_message.INFO Running on: nt Windows 11
-2024-05-16 01:53:38,795.v2_emit_message.INFO Python version:  3.12.2
-2024-05-16 01:53:38,796.v2_emit_message.INFO Python path: C:\Users\derek\OneDrive\Documents\Streaming Data\Week 3\streaming-03-rabbitmq\.venv
-2024-05-16 01:53:38,796.v2_emit_message.INFO Working dir: C:\Users\derek\OneDrive\Documents\Streaming Data\Week 3\streaming-03-rabbitmq
-2024-05-16 01:53:38,796.v2_emit_message.INFO ==================================================
-2024-05-16 01:53:38,805.v2_emit_message.INFO  [x] Sent Great job on correcting v2!
+2024-05-16 02:03:59,029.v2_emit_message.INFO ==================================================
+2024-05-16 02:03:59,029.v2_emit_message.INFO Today is 2024-05-16 at 02:03 AM
+2024-05-16 02:03:59,029.v2_emit_message.INFO Running on: nt Windows 11
+2024-05-16 02:03:59,030.v2_emit_message.INFO Python version:  3.12.2
+2024-05-16 02:03:59,030.v2_emit_message.INFO Python path: C:\Users\derek\OneDrive\Documents\Streaming Data\Week 3\streaming-03-rabbitmq\.venv
+2024-05-16 02:03:59,030.v2_emit_message.INFO Working dir: C:\Users\derek\OneDrive\Documents\Streaming Data\Week 3\streaming-03-rabbitmq
+2024-05-16 02:03:59,030.v2_emit_message.INFO ==================================================
+2024-05-16 02:03:59,041.v2_emit_message.INFO  [x] Sent Using two terminals is a piece of cake with the right setup!

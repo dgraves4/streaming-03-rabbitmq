@@ -6,3 +6,10 @@
 2024-05-16 01:52:59,979.v2_listen_for_messages.INFO Working dir: C:\Users\derek\OneDrive\Documents\Streaming Data\Week 3\streaming-03-rabbitmq
 2024-05-16 01:52:59,979.v2_listen_for_messages.INFO ==================================================
 2024-05-16 01:52:59,991.v2_listen_for_messages.INFO  [*] Waiting for messages. To exit press CTRL+C
+2024-05-16 01:53:07,575.v2_listen_for_messages.INFO Received: Hello World!
+2024-05-16 01:53:38,805.v2_listen_for_messages.INFO Received: Great job on correcting v2!
+2024-05-16 02:03:05,369.v2_listen_for_messages.INFO Received: Great job on correcting v2!
+2024-05-16 02:03:37,654.v2_listen_for_messages.INFO Received: Refactoring makes the code better!
+2024-05-16 02:03:59,041.v2_listen_for_messages.INFO Received: Using two terminals is a piece of cake with the right setup!
+2024-05-16 02:05:20,236.v2_listen_for_messages.WARNING User interrupted the listening process.
+2024-05-16 02:05:20,237.v2_listen_for_messages.INFO Closing connection. Goodbye.

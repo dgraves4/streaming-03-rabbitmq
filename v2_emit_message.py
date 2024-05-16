@@ -74,6 +74,6 @@ if __name__ == "__main__":
     #Define our variables for ease of use in changing parameters andmessages
     host = "localhost"
     queue_name = "hello"
-    message = "Great job on correcting v2!"
+    message = "Using two terminals is a piece of cake with the right setup!"
     send_message(host, queue_name, message) #Use variables to send message
 
