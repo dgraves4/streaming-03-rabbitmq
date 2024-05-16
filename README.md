@@ -44,10 +44,34 @@ We use .venv as the name to keep it away from our project files.
 
 In the same VS Code terminal window, activate the virtual environment.
 
-- On Windows, run: `.venv\Scripts\activate`
-- On Linux/MacOS, run: `source .venv/bin/activate`
+- On Windows, run: `source .venv\Scripts\activate` (bash)
 
 Verify you see the virtual environment name (.venv) in your terminal prompt.
+
+- NOTE: When activating the environment on a second console, do the following for the reccommended use of multiple terminals:
+
+The recommended way - with lots of space for your terminal -  is to jump out of VS Code and run your scripts outside VS Code. 
+
+For each concurrent terminal or process, do the following:
+
+- Open a new Anaconda Prompt (Windows) or Terminal (Mac) window. 
+- Use the cd (change directory) commandLinks to an external site. to cd to your repo folder. 
+- Verify your scripts are here with the dir (or ls) command. You should see your .py files. 
+- Activate or verify your Python environment:  conda activate base
+- Start your script: python script.py (use the name of  your file)
+ 
+
+Windows example:
+
+- Project repo location: C:\Users\dgraves4\Documents\streaming-03-rabbitmq
+- Anaconda prompt opens in (base) C:\Users\dgraves4>
+
+```bash
+cd Documents/streaming-03-rabbitmq
+dir
+conda activate base
+.venv\Scripts\activate
+```
 
 ## Task 3. Install Dependencies into the Virtual Environment
 
@@ -72,10 +96,10 @@ They are meant to be helpful, but are not required.
 You can help by updating the code for other common configurations. 
 Just fork the current repo, add your change, and create a pull request (no other changes please) and I'll pull it back in. 
 
-```shell
-python util_about.py
-python util_aboutenv.py
-python util_aboutrabbit.py
+```bash
+py util_about.py
+py util_aboutenv.py
+py util_aboutrabbit.py
 pip list
 ```
 
@@ -86,9 +110,6 @@ pip list
 
 1. Read the [RabbitMQ Hello World! tutorial](https://www.rabbitmq.com/tutorials/tutorial-one-python.html)
 1. Read the code and comments in our 2 project files: emit_message.py and listen_for_messages.py
-
-Don't worry if it doesn't all make sense the first time. 
-Approach it like a puzzle and see what you can figure out. 
 
 ## Task 6. Execute the Producer/Sender
 
@@ -103,9 +124,8 @@ We can execute additional commands in the terminal as soon as it finishes.
 1. Read v1_listen_for_messages.py (and the tutorial)
 1. Run the file.
 
-You'll need to fix an error in the program to get it to run.
-Once it runs successfully, will it terminate on its own? How do you know? 
-As long as the process is running, we cannot use this terminal for other commands. 
+Fixing any errors in the code, such as a typo in "localhost", will allow this version to run. Once it runs successfully, it will not terminate on its own, and requires the ctrl+c command in order to stop the listening process.  As long as this process is running, we cannot use this terminal for other commands. 
+
 
 ## Task 8. Open a New Terminal / Emit More Messages
 
@@ -130,12 +150,24 @@ Did you notice you had to change the message in TWO places?
 1. You update the actual message sent. 
 1. You also update what is displayed to the user. 
 1. Fix this by introducing a variable to hold the message. 
+```bash
+# define the message body
+message_body = "Check it out on RabbitMQ Management!"  # Now, only update this variable.
+```
 1. Use your variable when sending. 
+```bash
+# use the channel to publish a message to the queue
+ch.basic_publish(exchange="", routing_key="hello", body=message_body)
+```
 1. Use the variable again when displaying to the user. 
+```bash
+# print a message to the console for the user
+print(f"Sent [x] {message_body}")
+```
 
-Now, to send a new message, you'll only make ONE change.
+Now, to send a new message, you'll only make ONE change to the message_body variable in our code.
 Updating and improving code is called 'refactoring'. 
-Use your skills to keep coding enjoyable. 
+
 
 ## Version 2
 
@@ -145,8 +177,8 @@ and a consistent, reusable approach to building code.
 
 Each of the version 2 programs include an error as well. 
 
-1. Find the error and fix it. 
-1. Compare the structure of the version 2 files. 
+1. Find the error and fix it. (See below.)
+1. Compare the structure of the version 2 files. These files include additional error handling
 1. Modify the docstrings on all your files.
 1. Include your name and the date.
 1. Imports always go at the top, just after the file docstring.
@@ -160,6 +192,30 @@ Each of the version 2 programs include an error as well.
 1. Search GitHub for if __name__ == "__main__":
 1. How many hits did you get? 
 1. Learn and understand this common Python idiom.
+
+For v2_emit_message, the errors are as follows:
+```bash
+conn = pika.BlockingConnection(pika.ConnectionParameters(host)) #should be "localhost"
+
+# define a queue_name variable for ease of use in changing queue name
+queue_name = "hello"
+
+# use the channel to declare a queue
+ch.queue_declare(queue=queue_name)
+
+# define message variable for ease of use in changing messages
+message = "Refactoring is very useful for code maintenance and accessibility."
+
+# Define variables and use them to send messages with updated definitions
+    host = "localhost"
+    queue_name = "hello"
+    message = "Hello World!"
+    send_message(host, queue_name, message)
+```
+
+For v2_listen_for_messages.py, the errors are as follows:
+```
+
 
 ## Reference
 

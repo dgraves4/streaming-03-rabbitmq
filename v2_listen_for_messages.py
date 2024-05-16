@@ -1,4 +1,7 @@
 """
+Derek Graves
+05/16/2024
+Error Corrections and Refactoring
 
 Message listener 
 
@@ -51,7 +54,7 @@ def process_message(ch, method, properties, body):
 # define a main function to run the program
 # pass in the hostname as a string parameter if you like
 # if no argument is provided, set a default value to localhost
-def main(hn: str = "localhosttt"):
+def main(hn: str = "localhost"):
     """Main program entry point."""
 
     # when a statement can go wrong, use a try-except block
@@ -99,8 +102,9 @@ def main(hn: str = "localhosttt"):
         logger.warning("User interrupted the listening process.")
         sys.exit(0)
     finally:
+        if connection.is_open:
+            connection.close()
         logger.info("Closing connection. Goodbye.")
-        connection.close()
 
 
 # ---------------------------------------------------------------------------

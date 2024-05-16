@@ -1,5 +1,9 @@
 """
 
+Derek Graves
+05/16/2024
+Error Corrections and Refactoring
+
 Message sender / emitter 
 
 Description:
@@ -40,7 +44,7 @@ def send_message(host: str, queue_name: str, message: str):
 
     try:
         # create a blocking connection to the RabbitMQ server
-        conn = pika.BlockingConnection(pika.ConnectionParameters(host))
+        conn = pika.BlockingConnection(pika.ConnectionParameters("localhost"))
 
         # use the connection to create a communication channel
         ch = conn.channel()
@@ -59,11 +63,18 @@ def send_message(host: str, queue_name: str, message: str):
         sys.exit(1)
     finally:
         # close the connection to the server
-        conn.close()
+        if conn.is_open:
+            conn.close()
 
 
 # ---------------------------------------------------------------------------
 # If this is the script we are running, then call some functions and execute code!
 # ---------------------------------------------------------------------------
 if __name__ == "__main__":
-    send_message("llllocalhost", "hello", "Hello World!")
+
+    #Define our variables for ease of use in changing parameters andmessages
+    host = "localhost"
+    queue_name = "hello"
+    message = "Hello World!"
+    send_message(host, queue_name, message) #Use variables to send message
+
